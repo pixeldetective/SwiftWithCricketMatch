@@ -8,66 +8,74 @@ println("Welcome to the \(matchTitle) of \(tournamentTitle). It is \(team1) vs. 
 
 // Weather Report
 
-var temp = 49
-var wind = 156.78
+var temp = 34
+var wind = 20
 var windDirection = "north-south"
 var humidity = 78
 
 println("Temperature: \(temp) Degree Celcius, Wind : \(wind) kph \(windDirection), Moisture : \(humidity)% Humid")
 
 
+var tempHumamReadable = ""
+var windHumamReadable = ""
+var humidityHumamReadable = ""
+
+
 // For Temperature
 
 if ( temp >= 45 ) {
-    println("It's really hot today")
+    tempHumamReadable = "a really hot"
 }
 
 if ( temp >= 40 && temp < 45 ) {
-    println("It's hot today")
+    tempHumamReadable = "hot"
 }
 
 if ( temp >= 15 && temp < 40 ) {
-    println("It's an average day here")
+    tempHumamReadable = "an average"
 }
 
 if ( temp >= 5 && temp < 15 ) {
-    println("It's cold out here today")
+    tempHumamReadable = "a cold"
 }
 
 if ( temp < 5 ) {
-    println("It's chilling out here today")
+    tempHumamReadable = "a chilling"
 }
+
 
 
 // For Winds
 
 if ( wind >= 120 ) {
-    println("It's too windy today")
+    windHumamReadable = "too windy"
 }
 
 if ( wind >= 80 && wind < 120 ) {
-    println("It's windy today")
+    windHumamReadable = "windy"
 }
 
 if ( wind >= 40 && wind < 80 ) {
-    println("The winds are just perfect today")
+    windHumamReadable = "perfectly windy"
 }
 
 if ( wind < 40 ) {
-    println("it's not too windy today")
+    windHumamReadable = "not too windy"
 }
 
 
 // For Humidity
 
 if ( humidity >= 70 ) {
-    println("It's really humid today")
+    humidityHumamReadable = "really humid"
 }
 
 if ( humidity >= 40 && humidity < 70 ) {
-    println("It's humid today")
+    humidityHumamReadable = "humid"
 }
 
 if ( humidity < 40 ) {
-    println("It's not that humid today")
+    humidityHumamReadable = "not that humid"
 }
+
+println("It's \(tempHumamReadable), \(windHumamReadable) and \(humidityHumamReadable) day today.")
